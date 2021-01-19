@@ -9,9 +9,18 @@ export default class App extends React.Component {
       data: []
     }
   }
+  
+  componentDidMount(){
+    fetch('/people')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({data})
+      })
+  }
 
   
   render() {
+    console.log('state: ', this.state)
     return (
       <div className="App">
         <h1>hello world</h1>
