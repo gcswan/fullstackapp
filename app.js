@@ -8,6 +8,8 @@ app.get('/people', (req, res) => {
     { id: 2, firstName: 'Somebody', lastName: 'Else' }
   ])
 })
+
+// For serving a static build in production
 //app.get("/",(req,res)=>{
     //app.use(express.static(__dirname+"/client/build/static"));            //required for css and js
     //app.use(express.static('./client/build/', express.static('static')));  //required for images and fonts
